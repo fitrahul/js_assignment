@@ -1,0 +1,54 @@
+#navbar {
+    display: flex;
+    justify-content: space-between;
+    /* margin: 10px; */
+    /* border: 1px solid red; */
+    padding-left: 150px;
+    padding-right: 150px;
+    background-color: #ECEFF1;
+    border-radius: 50px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+#food {
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    /* border: 1px dashed green; */
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: #F3E5F5;
+    border-radius: 50px;
+}
+#food h3 {
+    padding-left: 50px;
+    padding-right: 50px;
+}
+#food a {
+    text-decoration: none;
+}
+#form {
+    display: grid;
+    grid-template-columns: 230px;
+    border: 1px solid white;
+    border-radius: 30%;
+}
+#form h3 {
+    margin: auto;
+}
+#form a {
+    text-decoration: none;
+}
+#receipe {
+    color: #FF1744;
+    background-color: #E3F2FD;
+    border-radius: 20px;
+    border: 1px solid #2962FF;
+    width: 70%;
+}
+#submit {
+    color: #FF1744;
+    background-color: #E3F2FD;
+    border-radius: 20px;
+    border: 1px solid #2962FF;
+}

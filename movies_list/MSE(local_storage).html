@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" name="" id="movie" placeholder="Type Movie Name">
+    <button onclick="getMovie()">submit</button><br/><hr>
+    <div id="main" style="width: 100px; margin: auto;">MOVIE LIST</div>
+</body>
+</html>
+<script>
+    async function getMovie() {
+        try {
+            let movie = document.getElementById("movie").value;
+            let response = await fetch(`http://www.omdbapi.com/?t=${movie}&apikey=a468c50f`);
+            let data = await response.json();
+            var obj = {
+                poster: data.Poster,
+                date: data.Released,
+                title: data.Title,
+                rating: data.imdbRating,
+                // response: data.Response
+            }
+            console.log("data",obj);
+            let arr;
+            arr = localStorage.getItem("movie_data");
+            if (arr == null) {
+                arr = [];
+            }
+            else {
+                arr = JSON.parse(localStorage.getItem("movie_data"));
+            }
+            if (obj.title == undefined) {
+                alert("movie not found");
+            }
+            else {
+                arr.push(obj);
+                localStorage.setItem("movie_data", JSON.stringify(arr));
+            }
+        }
+        catch (error) {
+            console.log("error", error);
+        }
+    }
+
+    function showMovie () {
+        let arr = JSON.parse(localStorage.getItem("movie_data"));
+        let main_div = document.getElementById("main");
+        arr.forEach (function (obj) {
+            var div = document.createElement("div");
+            var image = document.createElement("img");
+            image.src = obj.poster;
+            var p_date = document.createElement("p");
+            p_date.innerHTML = obj.date;
+            var p_title = document.createElement("p");
+            p_title.innerHTML = obj.title;
+            var p_rating = document.createElement("p");
+            p_rating.innerHTML = obj.rating;
+            div.append(image, p_date, p_title, p_rating);
+            main_div.append(div);
+            if (obj.rating > 8.5) {
+                var rec_div = document.createElement("div");
+                rec_div.textContent = "Recommended";
+                div.append(rec_div);
+            }
+        });
+    }
+    showMovie();
+</script>

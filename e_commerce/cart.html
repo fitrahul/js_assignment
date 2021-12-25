@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="cart.css">
+</head>
+<body>
+    <BR/>
+    <div style="width: 250PX; text-align: center; margin: auto; color: blue; background-color: rgb(226, 205, 205);font-size: 20px;">WELCOME TO CART PAGE</div>
+    <BR/><hr><br/>
+    <input type="text" name="" id="promo" placeholder="Apply Promocode Here" style="display: block; margin: auto;">
+    <br/>
+    <button onclick="submitPromo()" style="display: block; margin: auto;">submit Promo Code</button>
+    <br/><hr><br/> 
+    <button style="display: block; margin: auto; background-color: darkorange;"><a href="checkout.html" style="text-decoration: none;">Checkout</a></button>
+    <br/><hr>
+    <div class="cart_page">
+        <div id="cart"></div>
+        <div id="total">
+            <div style="background-color: #EDE7F6;"><br/>
+                <p style="text-align: center;">TOTAL NUMBER OF ITEMS</p>
+                <p id="items" style="background-color: #D1C4E9; text-align: center; font-size: 25px; color: darkblue; padding: 5px; width: 50%; margin: auto;"></p><br/>
+            </div><hr>
+            <div style="background-color: #EDE7F6;"><br/>
+                <p style="text-align: center;">TOTAL AMOUNT IN RS</p>
+                <p id="amount" style="background-color: #D1C4E9; text-align: center; font-size: 25px; color: darkblue; padding: 5px; width: 50%; margin: auto;"></p><br/>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+<script src="cart.js"></script>

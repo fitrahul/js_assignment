@@ -1,0 +1,47 @@
+/*
+*****
+SIGN IN / UP BUTTON
+*****
+ */
+
+#sign_in_up{
+    float: right;
+    width: 200px;
+    border: 5px solid #7C4DFF; 
+    border-radius: 25px;
+    height: 45px; 
+    display: flex; 
+    justify-content: space-evenly;
+}
+#sign_in_up button{
+    border: none;
+    background: #BCAAA4;
+    border: 2px solid red;
+    margin: 5px;
+    border-radius: 15px;
+}
+
+/* 
+*****
+SIGN UP PAGE
+***** 
+*/
+
+#main_div {
+    padding: 15px;
+    width: 40%;
+    border: 1px solid #616161;
+    border-radius: 15px;
+    margin: auto;
+    background: #ECEFF1;
+}
+#main_div input {
+    margin: auto;
+    padding: 15px;
+    width: 93%;
+    background: #BDBDBD;
+    border-radius: 15px;
+    color: #536DFE;
+    font-size: 20px;
+    border: none;
+}

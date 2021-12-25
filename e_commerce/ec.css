@@ -1,0 +1,30 @@
+/* CSS OF HOME PAGE */
+
+#form {
+    width: 44%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    background-color: #AA00FF;
+    padding: 5px;
+}
+
+#main_div {
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20%;
+    width: 90%;
+    margin: auto;
+    grid-gap: 5%;
+}
+
+#main_div div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#btn_to_cart {
+    width: 10%;
+    margin: auto;
+    margin-top: 20px;
+}
