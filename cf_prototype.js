@@ -1,75 +1,75 @@
 // 1. constructor function (cf is a blue print. 'new' word is used to create obj using cf)
 
-// function cf1 (f,l) {
-//     this.fname = f,
-//     this.lname = l
-// }
+function cf1 (f,l) {
+    this.fname = f,
+    this.lname = l
+}
 
-// var res = new cf1("Rahul","Kumar");
-// console.log(res);
+var res = new cf1("Rahul","Kumar");
+console.log(res);
 
 // ********************************************
 
 // 2. cf1 -->> cf2
 
-// function cf1 (f,l) {
-//     this.fname = f,
-//     this.lname = l
-// }
+function cf1 (f,l) {
+    this.fname = f,
+    this.lname = l
+}
 
-// function cf2 (a,f,l) {
-//     cf1.call(this,f,l),
-//     this.age = a
-// }
+function cf2 (a,f,l) {
+    cf1.call(this,f,l),
+    this.age = a
+}
 
-// var res = new cf2(25,"Rahul","Kumar");
-// console.log(res);
+var res = new cf2(25,"Rahul","Kumar");
+console.log(res);
 
 // ********************************************
 
 // 3. cf -->> obj
 
-// function cf (p) {
-//     this.age = p
-// }
+function cf (p) {
+    this.age = p
+}
 
-// var obj = {
-//     name: "Rahul",
-// }
+var obj = {
+    name: "Rahul",
+}
 
-// cf.call(obj,25);
-// console.log(obj);
+cf.call(obj,25);
+console.log(obj);
 
 // ********************************************
 
 // 4. obj1 -->> obj2 (obj2 is created using obj1)
 
-// var obj1 = {
-//     legs: 4,
-//     tail: true
-// }
+var obj1 = {
+    legs: 4,
+    tail: true
+}
 
-// var obj2 = Object.create(obj1);
-// obj2.position = "Child of obj1";
-// console.log(obj2);
+var obj2 = Object.create(obj1);
+obj2.position = "Child of obj1";
+console.log(obj2);
 
 // ********************************************
 
 // 5. obj -->> cf
 
-// var obj = {
-//     legs: 4,
-//     tail: true
-// }
+var obj = {
+    legs: 4,
+    tail: true
+}
 
-// function cf () {
-//     this.name = "child of obj"
-// }
+function cf () {
+    this.name = "child of obj"
+}
 
-// cf.prototype = obj;
+cf.prototype = obj;
 
-// var res = new cf();
-// console.log(res);
+var res = new cf();
+console.log(res);
 
 // ********************************************
 
